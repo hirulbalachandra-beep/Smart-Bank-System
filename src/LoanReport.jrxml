@@ -1,0 +1,131 @@
+<!-- Created with Jaspersoft Studio version 7.0.6.final using JasperReports Library version 7.0.6-5d2a603fdc6b3db8f842a83383e594f41891534d  -->
+<jasperReport name="LoanReport" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50.0" bold="true"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18.0"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12.0" bold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12.0"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle backcolor="#E6DAC3">
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<query language="SQL"><![CDATA[SELECT *
+FROM loans;]]></query>
+	<field name="loan_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="loan_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="loan_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loans"/>
+	</field>
+	<field name="customer_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="customer_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="customer_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loans"/>
+	</field>
+	<field name="loan_amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="loan_amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="loan_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loans"/>
+	</field>
+	<field name="interest_rate" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="interest_rate"/>
+		<property name="com.jaspersoft.studio.field.label" value="interest_rate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loans"/>
+	</field>
+	<field name="duration_months" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="duration_months"/>
+		<property name="com.jaspersoft.studio.field.label" value="duration_months"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loans"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loans"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="136" splitType="Stretch">
+		<element kind="staticText" uuid="bc1ce1da-8232-46ea-be55-cec4abb986dd" x="210" y="10" width="419" height="62" vTextAlign="Middle" style="Title">
+			<text><![CDATA[LOAN REPORT]]></text>
+		</element>
+	</title>
+	<pageHeader splitType="Stretch"/>
+	<columnHeader height="16" splitType="Stretch">
+		<element kind="line" uuid="e9d2002a-c8ee-4649-a258-640dad29110c" positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1">
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</element>
+		<element kind="staticText" uuid="f9b06b3d-22c3-4ed6-9d69-afe30f8b4179" x="0" y="0" width="133" height="15" forecolor="#736343" style="Column header">
+			<text><![CDATA[loan_id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eb94d4a1-210c-4c64-8a40-c72184f994eb"/>
+		</element>
+		<element kind="staticText" uuid="85132666-1dbb-4242-845a-a04da59349c6" x="133" y="0" width="133" height="15" forecolor="#736343" style="Column header">
+			<text><![CDATA[customer_id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9a46702-0d09-463b-a262-506cf5b4620c"/>
+		</element>
+		<element kind="staticText" uuid="2630cb09-4e83-4b07-804d-d48e5a920954" x="266" y="0" width="133" height="15" forecolor="#736343" style="Column header">
+			<text><![CDATA[loan_amount]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e4054164-885e-4db0-a44d-b0480cbd6d1a"/>
+		</element>
+		<element kind="staticText" uuid="f274b55b-9ab6-4495-884a-956b45f5a23c" x="399" y="0" width="133" height="15" forecolor="#736343" style="Column header">
+			<text><![CDATA[interest_rate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14f53786-6da5-4b02-a5f8-22c1734ab551"/>
+		</element>
+		<element kind="staticText" uuid="3ee13c34-a827-45da-84a9-aa7a02e064ca" x="532" y="0" width="133" height="15" forecolor="#736343" style="Column header">
+			<text><![CDATA[duration_months]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2898278d-1b26-40d0-ae78-320185a2732d"/>
+		</element>
+		<element kind="staticText" uuid="1263e7f9-8c8c-400f-b6ea-2fb94de42158" x="665" y="0" width="133" height="15" forecolor="#736343" style="Column header">
+			<text><![CDATA[status]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b1f599b0-8ced-4c24-b5ce-ac6a26a1b365"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<element kind="frame" uuid="fa7cec56-4ec1-48e6-a26e-7266a995d174" mode="Opaque" x="0" y="0" width="802" height="15" style="Row">
+				<element kind="textField" uuid="da208256-5003-4591-8996-e60677cf761a" x="0" y="0" width="133" height="15" textAdjust="StretchHeight" style="Detail">
+					<expression><![CDATA[$F{loan_id}]]></expression>
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eb94d4a1-210c-4c64-8a40-c72184f994eb"/>
+				</element>
+				<element kind="textField" uuid="2298b782-8e73-4c05-a915-fab67bb47c7c" x="133" y="0" width="133" height="15" textAdjust="StretchHeight" style="Detail">
+					<expression><![CDATA[$F{customer_id}]]></expression>
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9a46702-0d09-463b-a262-506cf5b4620c"/>
+				</element>
+				<element kind="textField" uuid="82abbf27-6ca9-463f-994a-4fbb78c75e72" x="266" y="0" width="133" height="15" textAdjust="StretchHeight" style="Detail">
+					<expression><![CDATA[$F{loan_amount}]]></expression>
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e4054164-885e-4db0-a44d-b0480cbd6d1a"/>
+				</element>
+				<element kind="textField" uuid="9d4374d5-1926-46fb-ac3e-8d670b8c5ea7" x="399" y="0" width="133" height="15" textAdjust="StretchHeight" style="Detail">
+					<expression><![CDATA[$F{interest_rate}]]></expression>
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14f53786-6da5-4b02-a5f8-22c1734ab551"/>
+				</element>
+				<element kind="textField" uuid="11d40d36-72f5-4f92-b098-b3749dc305cc" x="532" y="0" width="133" height="15" textAdjust="StretchHeight" style="Detail">
+					<expression><![CDATA[$F{duration_months}]]></expression>
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2898278d-1b26-40d0-ae78-320185a2732d"/>
+				</element>
+				<element kind="textField" uuid="bc131735-13db-41b2-8ed6-14c18c0b03ab" x="665" y="0" width="133" height="15" textAdjust="StretchHeight" style="Detail">
+					<expression><![CDATA[$F{status}]]></expression>
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b1f599b0-8ced-4c24-b5ce-ac6a26a1b365"/>
+				</element>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="6" splitType="Stretch">
+		<element kind="line" uuid="fa5e88d5-a011-4e32-8f12-ce923f903111" positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1">
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</element>
+	</columnFooter>
+	<pageFooter height="25" splitType="Stretch">
+		<element kind="frame" uuid="5d8169bd-4a75-48c8-8a68-6d3ad5ba9402" mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF">
+			<element kind="textField" uuid="e5e27efa-b599-499b-9ca3-848cb511cb7b" x="783" y="1" width="40" height="20" forecolor="#736343" fontSize="10.0" evaluationTime="Report" bold="false" vTextAlign="Middle" style="Column header">
+				<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+			</element>
+			<element kind="textField" uuid="18cfe1ca-f7d6-48b0-9827-28578b42a5e0" x="703" y="1" width="80" height="20" forecolor="#736343" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle" style="Column header">
+				<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+			</element>
+			<element kind="textField" uuid="fbce24bb-3cb1-44a3-8eec-8c067ddbe5b5" x="22" y="1" width="197" height="20" forecolor="#736343" fontSize="10.0" pattern="EEEEE dd MMMMM yyyy" bold="false" vTextAlign="Middle" style="Column header">
+				<expression><![CDATA[new java.util.Date()]]></expression>
+			</element>
+		</element>
+	</pageFooter>
+	<summary splitType="Stretch"/>
+</jasperReport>
