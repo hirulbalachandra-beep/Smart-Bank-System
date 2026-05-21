@@ -425,9 +425,9 @@ audit.executeUpdate();
         cmbToAccount.setSelectedIndex(0);
 
     } catch (Exception e) {
-        e.printStackTrace();
-        JOptionPane.showMessageDialog(this, "Transaction Failed");
-    }
+    e.printStackTrace();
+    JOptionPane.showMessageDialog(this, e.toString());
+}
 
     }//GEN-LAST:event_btnProcessActionPerformed
 
